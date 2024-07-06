@@ -16,7 +16,7 @@ for file in files:
     
     # ファイル名からid部分を取得
     file_id = file.split('_')[0]
-    print(file_id)
+    print("操作対象ファイルのid", file_id)
 
     marker_file_path = f'./data/{file_id}_Marker.csv'
     angle_file_path = f'./data/{file_id}_Angle.csv'
@@ -28,4 +28,3 @@ for file in files:
         f.write(f'{file_id},{max_r_angle},{min_r_angle},{max_l_angle},{min_l_angle}\n')
 
 print('処理が完了しました。result.csvを確認してください。')
-
